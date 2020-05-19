@@ -1,0 +1,9 @@
+columns:
+    id:
+        label: '#'
+        type: number
+        width: 30px
+    namespace:
+        label: Modèle
+        type: text
+        select: 'CONCAT(namespace, ''\\'', model_name)'

@@ -1,0 +1,11 @@
+plugin:
+    name: 'FrontEnd Model Editor'
+    description: 'Create Front End shortcut to your model on pages where they are displayed'
+    author: RomainMazB
+    icon: oc-icon-cubes
+    homepage: 'https://www.maz.digital'
+navigation:
+    main-menu:
+        label: 'romainmazb.femodeleditor::lang.menus.main-menu'
+        url: romainmazb/femodeleditor/fememodels
+        icon: icon-cubes

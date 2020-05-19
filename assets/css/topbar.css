@@ -1,0 +1,61 @@
+#feme-topbar {
+    z-index: 999;
+    background: rgba(0,0,0,.8);
+}
+
+#feme-topbar ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+#feme-topbar li {
+    color: #ccc;
+    display: block;
+    float: left;
+    padding: .5rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+#feme-topbar li a {
+    color: #ccc;
+}
+
+#feme-topbar li:hover,
+li:focus-within {
+    background: rgb(0,0,0);
+    cursor: pointer;
+}
+
+#feme-topbar li:focus-within a {
+    outline: none;
+}
+
+#feme-topbar ul li ul {
+    background: rgba(0,0,0,.8);
+    visibility: hidden;
+    opacity: 0;
+    min-width: 7rem;
+    position: absolute;
+    left:0;
+    right:0;
+    transition: all 0.5s ease;
+    margin-top: .5rem;
+    display: none;
+}
+
+#feme-topbar ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+#feme-topbar ul li ul li {
+    clear: both;
+    width: 100%;
+}

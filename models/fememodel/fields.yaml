@@ -1,0 +1,46 @@
+fields:
+    displayed_actions:
+        label: 'romainmazb.femodeleditor::lang.labels.displayed_actions'
+        options:
+            labels.create: Create
+            labels.preview: Preview
+            labels.update: Update
+            labels.delete: Delete
+        span: right
+        cssClass: inline-options
+        type: checkboxlist
+    namespace:
+        label: 'romainmazb.femodeleditor::lang.labels.namespace'
+        span: left
+        hidden: 0
+        required: 1
+        type: text
+    pages_names:
+        label: 'romainmazb.femodeleditor::lang.labels.pages_names'
+        prompt: 'Add new item'
+        span: right
+        type: repeater
+        comment: 'romainmazb.femodeleditor::lang.comments.pages_names'
+        form:
+            fields:
+                page_name:
+                    label: 'romainmazb.femodeleditor::lang.labels.page_name'
+                    span: full
+                    type: text
+    model_name:
+        label: 'romainmazb.femodeleditor::lang.labels.model_name'
+        span: left
+        required: 1
+        type: text
+    url_param:
+        label: 'romainmazb.femodeleditor::lang.labels.url_param'
+        span: left
+        default: id
+        type: text
+    link_text:
+        label: 'romainmazb.femodeleditor::lang.labels.link_text'
+        span: left
+        preset:
+            field: model_name
+            type: camel
+        type: text

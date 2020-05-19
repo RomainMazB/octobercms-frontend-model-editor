@@ -1,0 +1,10 @@
+name: FEMEModels
+form: $/romainmazb/femodeleditor/models/fememodel/fields.yaml
+modelClass: RomainMazB\FEModelEditor\Models\FEMEModel
+defaultRedirect: romainmazb/femodeleditor/fememodels
+create:
+    redirect: 'romainmazb/femodeleditor/fememodels/update/:id'
+    redirectClose: romainmazb/femodeleditor/fememodels
+update:
+    redirect: romainmazb/femodeleditor/fememodels
+    redirectClose: romainmazb/femodeleditor/fememodels
