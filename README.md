@@ -8,7 +8,11 @@ You can easily from a back-end form:
  - Display many models on a same page (example: Category and Post creation on blog's home page).
  
  
- ## How to use it
+## How to use it
+### First step
+The plugins depends on the `RomainMazB.AdminBar` plugin and its `AdminBar` component, you need to insert the component in your layout to displays the shortcuts. See the [AdminBar documentation](https://github.com/RomainMazB/octobercms-adminbar#add-the-adminbar-component-to-layout).
+
+
 For example, will use in this documentation the well known `Rainlab.Blog` plugin to display the CRUD shortcuts for `Post` model into the blog's pages located in the themes at `pages/blog/home`(url `/blog`) and `pages/blog/post`(url `/blog/:slug`).
 
 Since `home` displays just a list of posts, it will only display the `create` action. `post` page displays a `blogPost` component, identified with `:slug` parameters, the plugin will display all available CRUD actions: `create`, `update`, `delete` (`preview` is not allowed with `Rainlab.Blog`)
