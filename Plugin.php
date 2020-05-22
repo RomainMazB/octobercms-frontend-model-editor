@@ -58,6 +58,7 @@ class Plugin extends PluginBase
                 $action_to_trigger = $action === 'delete' ? 'update' : $action;
                 $model_action_url = $backend_url . $namespace_url . $model_url . $action_to_trigger;
 
+                $link_text = trans('backend::lang.relation.' . $action);
                 // Search and provide id for preview/update/delete actions
                 if (in_array($action, ['preview', 'update', 'delete'])) {
                     if ($displayed_model !== null) {
@@ -67,7 +68,7 @@ class Plugin extends PluginBase
                         if ($action === 'delete') {
                             $navigation['items'][] = [
                                 'type' => 'ajaxLink',
-                                'text' => Str::ucfirst($action),
+                                'text' => $link_text,
                                 'form_action' => 'onDelete',
                                 'datas' => [
                                     'request' => "onDelete",
@@ -77,14 +78,14 @@ class Plugin extends PluginBase
                             ];
                         } else {
                             $navigation['items'][] = [
-                                'text' => Str::ucfirst($action),
+                                'text' => $link_text,
                                 'url' => $model_action_url,
                             ];
                         }
                     }
                 } else {
                     $navigation['items'][] = [
-                        'text' => Str::ucfirst($action),
+                        'text' => $link_text,
                         'url' => $model_action_url
                     ];
                 }
