@@ -1,7 +1,7 @@
 <?php return [
     'plugin' => [
         'name' => 'FrontEnd Model Editor',
-        'description' => 'Create front end shortcuts links in the AdminBar on frontend to redirect to the backend model''s forms.'
+        'description' => 'Create front end shortcuts links in the AdminBar on frontend to redirect to the backend model\'s forms.'
     ],
     'labels' => [
         'namespace' => 'Namespace',
