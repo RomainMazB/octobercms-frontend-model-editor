@@ -20,7 +20,7 @@ fields:
         prompt: 'Add new item'
         span: right
         type: repeater
-        comment: 'romainmazb.femodeleditor::lang.comments.pages_names'
+        commentAbove: 'romainmazb.femodeleditor::lang.comments.pages_names'
         form:
             fields:
                 page_name:
