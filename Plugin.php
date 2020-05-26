@@ -2,10 +2,12 @@
 
 namespace RomainMazB\FEModelEditor;
 
+use Backend\Facades\Backend;
 use Illuminate\Support\Str;
 use RomainMazB\FEModelEditor\Models\FEMEModel;
 use System\Classes\PluginBase;
 use Event;
+use System\Classes\SettingsManager;
 
 class Plugin extends PluginBase
 {
@@ -13,12 +15,9 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-        Event::listen('romainmazb.adminbar.init', function ($adminBar, $items) {
+        Event::listen('romainmazb.adminbar.init', function ($adminBar, &$items) {
             $links = $this->generateLinksForPage($adminBar->getController());
-
-            foreach ($links as $link) {
-                $adminBar->addItems($link);
-            }
+            $items = array_merge($items, $links);
         });
     }
 
@@ -95,5 +94,20 @@ class Plugin extends PluginBase
         });
 
         return $adminBar_items->toArray();
+    }
+
+    public function registerSettings()
+    {
+        return [
+            'femodeleditor' => [
+                'label'       => 'romainmazb.femodeleditor::lang.plugin.name',
+                'description' => 'romainmazb.femodeleditor::lang.plugin.description',
+                'icon'        => 'icon-cubes',
+                'url'         => Backend::url('romainmazb/femodeleditor/fememodels'),
+                'category'    => SettingsManager::CATEGORY_CMS,
+                'order'       => 500,
+                'permissions' => ['romainmazb.femodeleditor.manage_feme']
+            ]
+        ];
     }
 }

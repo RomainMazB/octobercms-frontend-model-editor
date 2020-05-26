@@ -1,3 +1,4 @@
 1.0.0:
     - builder_table_create_romainmazb_femodeleditor_models.php
     - First version
+1.0.1: Move the backend shortcut from main navbar to Settings>CMS

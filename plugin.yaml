@@ -4,8 +4,7 @@ plugin:
     author: RomainMazB
     icon: oc-icon-cubes
     homepage: 'https://www.octobercms.fr'
-navigation:
-    main-menu:
-        label: 'romainmazb.femodeleditor::lang.menus.main-menu'
-        url: romainmazb/femodeleditor/fememodels
-        icon: icon-cubes
+permissions:
+    manage_feme:
+        tab: 'romainmazb.femodeleditor::lang.plugin.name'
+        label: 'romainmazb.femodeleditor::lang.permission'
